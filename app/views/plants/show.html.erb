@@ -1,0 +1,18 @@
+<h1><%= @plant.nickname %></h1>
+
+<img src="<%= @plant.image_url %>" alt="<%= @plant.nickname %>">
+
+<ul>
+  <li>Species: <%= @plant.plant_species %></li>
+  <li>Age: <%= @plant.age %></li>
+  <li>Description: <%= @plant.description %></li>
+  <li>Location: <%= @plant.location %></li>
+  <li>Water Schedule: <%= @plant.watering_schedule %></li>
+</ul>
+
+
+<h3>Comments</h3>
+
+<% @comments.each do |comment| %>
+<%= comment.content %>
+<% end %>
