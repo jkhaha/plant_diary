@@ -3,6 +3,7 @@ class PlantsController < ApplicationController
   def show
     @plant = Plant.find(params[:id])
     @comments = @plant.comments
+    @comment = Comment.new
   end
 
   def new

@@ -11,8 +11,12 @@
 </ul>
 
 
-<h3>Comments</h3>
+<h3>Comments:</h3>
 
 <% @comments.each do |comment| %>
+<div>
 <%= comment.content %>
+</div>
 <% end %>
+
+<%= link_to "Add a comment", new_comment_path %>

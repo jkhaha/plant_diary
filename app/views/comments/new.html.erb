@@ -1,0 +1,14 @@
+<h1>Add A Comment:</h1>
+<%= form_for @comment do |f| %>
+<p>
+<%= f.label :content %>:
+</p>
+<p>
+<%= f.text_area :content %>
+</p>
+<p>
+<%= f.label :plant_id %>:
+<%= f.text_field :plant_id %>
+</p>
+<%= f.submit %>
+<% end %>
