@@ -1,0 +1,19 @@
+<h1>Create Plant</h1>
+
+<%= form_for @plant do |f| %>
+<%= f.label :nickname %>
+<%= f.text_field :nickname %>
+<%= f.label :plant_species %>
+<%= f.text_field :plant_species %>
+<%= f.label :age %>
+<%= f.text_field :age %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<%= f.label :image_url %>
+<%= f.text_field :image_url %>
+<%= f.label :watering_schedule %>
+<%= f.text_field :watering_schedule %>
+<%= f.submit %>
+<% end  %>
