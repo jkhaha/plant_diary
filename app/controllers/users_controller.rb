@@ -1,19 +1,24 @@
 class UsersController < ApplicationController
 
   def index
-    @user = User.new(user_params)
+    @user = User.new
     if @user.valid?
       @user.save
       redirect_to user_path(@user)
     else
-      render :new
+
+    end
+
+    def show
+      @user = User.find(params[:id])
+      @plants = @user.plants
     end
   end
 
   private
 
-  def user_params
-    params.require(:user).permit(:name)
-  end
+  # def user_params
+  #   params.require(:user).permit(:name)
+  # end
 
 end
