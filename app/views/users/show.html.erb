@@ -1,0 +1,4 @@
+<h1><%= @user.name %></h1>
+<% @plants.each do |plant| %>
+<%= link_to plant.nickname, plant_path(plant) %>
+<% end %>
