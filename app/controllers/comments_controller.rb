@@ -6,8 +6,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(comment_params)
-    @plant = @comment.plant
-    redirect_to plant_path(@plant)
+    @comment.save
+    redirect_to plant_path(@comment.plant)
   end
 
 private

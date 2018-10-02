@@ -1,5 +1,14 @@
 <h1>Create A Plant:</h1>
 
+<% if @plant.errors.any? %>
+<% @plant.errors.full_messages.each do |message| %>
+<ul>
+  <li><%= message %></li>
+</ul>
+  <% end %>
+<% end %>
+
+
 <%= form_for @plant do |f| %>
 <p>
 <%= f.label :nickname %>:

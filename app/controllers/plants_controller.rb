@@ -4,6 +4,7 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
     @comments = @plant.comments
     @comment = Comment.new
+
   end
 
   def new
@@ -12,8 +13,13 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    @plant.save
-    redirect_to plant_path(@plant)
+    if @plant.valid?
+      @plant.save
+      redirect_to plant_path(@plant)
+    else
+
+      render :new
+    end
   end
 
   def edit

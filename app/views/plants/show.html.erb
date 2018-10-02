@@ -11,12 +11,33 @@
 </ul>
 
 
-<h3>Comments:</h3>
+<h2>Comments:</h2>
 
 <% @comments.each do |comment| %>
 <div>
+<%= comment.created_at.strftime("%B %d, %Y") %>:
 <%= comment.content %>
+
 </div>
 <% end %>
 
-<%= link_to "Add a comment", new_comment_path %>
+<h4>Add A Comment:</h4>
+<% if @comment.errors.any? %>
+<% @comment.errors.full_message.each do |message| %>
+<ul>
+  <li><%= message %></li>
+</ul>
+  <% end %>
+<% end %>
+<%= form_for @comment do |f| %>
+<p>
+<%= f.label :content %>:
+</p>
+<p>
+<%= f.text_area :content %>
+</p>
+<p>
+<%= f.hidden_field :plant_id, value: @plant.id %>
+</p>
+<%= f.submit %>
+<% end %>
