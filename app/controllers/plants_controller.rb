@@ -4,7 +4,6 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
     @comments = @plant.comments
     @comment = Comment.new
-
   end
 
   def new
@@ -17,7 +16,6 @@ class PlantsController < ApplicationController
       @plant.save
       redirect_to plant_path(@plant)
     else
-
       render :new
     end
   end
@@ -28,12 +26,16 @@ class PlantsController < ApplicationController
 
   def update
     @plant = Plant.find(params[:id])
-    @plant.update(plant_params)
-    redirect_to plant_path(@plant)
+    if @plant.update(plant_params)
+      redirect_to plant_path(@plant)
+    else
+      render :edit
+    end
   end
 
   def destroy
     @plant = Plant.find(params[:id])
+    @user = @plant.user
     @plant.destroy
     redirect_to user_path(@user)
   end
