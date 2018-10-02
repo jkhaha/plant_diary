@@ -4,6 +4,7 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
     @comments = @plant.comments
     @comment = Comment.new
+    @user = @plant.user
   end
 
   def new

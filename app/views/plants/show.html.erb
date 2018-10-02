@@ -1,6 +1,11 @@
 <h1><%= @plant.nickname %></h1>
 
 <p><%= link_to "Edit #{@plant.nickname}", edit_plant_path(@plant) %></p>
+<p>
+<%= form_tag plant_path(@plant.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@plant.nickname}" %>
+<% end %>
+</p>
 
 <img src="<%= @plant.image_url %>" alt="<%= @plant.nickname %>">
 
@@ -44,6 +49,4 @@
 <%= f.submit %>
 <% end %>
 
-<%= form_tag plant_path(@plant.id), method: "delete" do %>
-  <%= submit_tag "Delete #{@plant.nickname}" %>
-<% end %>
+<%= link_to "Go back", user_path(@user.id) %>
