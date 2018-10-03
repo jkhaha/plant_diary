@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Plant.destroy_all
 User.destroy_all
+
 
 
 mckenzie = User.create(name: "McKenzie ")

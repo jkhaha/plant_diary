@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # 
+  #
   # def new
   #   @user = User.new
   # end
@@ -18,11 +18,10 @@ class UsersController < ApplicationController
     def show
       @user = User.find(params[:id])
       if params[:search]
-        @plants = Plant.where(plant_species: params[:search])
-        byebug
-        if @plants == []
-          error = "No plants match your search"
-          error
+        @plants = Plant.where(plant_species: params[:search].capitalize)
+        if @plants.empty?
+          @error = "No plants match your search"
+          @error
         end
       else
         @plants = @user.plants

@@ -5,10 +5,16 @@
  <%= submit_tag 'Search' %>
 <% end %>
 
+<% if @plants.empty? %>
+  <p><%= @error %></p>
+  <%= link_to "Go Back to All Plants", user_path(@user) %>
+<% else %>
+
 <% @plants.each do |plant| %>
 <p>
 <%= link_to plant.nickname, plant_path(plant) %>
 </p>
+<% end %>
 <% end %>
 
 <p>
