@@ -40,11 +40,12 @@
 
 <p>
   <h4>To Do List:</h4>
-  <% @tasks.each do |task| %>
-  <%= check_box_tag 'task_ids[]', task.id %>
-  <%= label_tag "task_ids_", task.content %>
-  <% end %>
 
+  <% @tasks.each do |task| %>
+    <%= task.content %>
+      <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %>
+      <% end %>
+  <% end %>
 
   <%= form_for @task do |f| %>
   <p>

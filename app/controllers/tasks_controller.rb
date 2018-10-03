@@ -14,13 +14,11 @@ class TasksController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
+    @task = Task.find(params[:id])
+    @user = @task.user
+    @task.destroy
+    redirect_to user_path(@user)
   end
 
   private
