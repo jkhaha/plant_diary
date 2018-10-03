@@ -1,2 +1,22 @@
-
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+h1, h2, h3, h4, button, form, p, img {
+  margin-left: 20px;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+}
+
+.logout {
+   position:absolute;
+   top:0;
+   right:0;
+   padding: 20px;
+}
+body {
+    background-image: url("https://i.pinimg.com/originals/4c/25/a6/4c25a6dcc328795f6bfac594bb44734e.png");
+}

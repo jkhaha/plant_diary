@@ -12,16 +12,18 @@
 <% end %>
 <% end %>
 
+<div class="logout">
 <%= form_tag sessions_path, method: :delete do %>
   <%= submit_tag "Log out" %>
 <% end %>
+</div>
 
 <%= form_tag(user_path, method: :get) do %>
 <%= text_field_tag :search, params[:search] %>
  <%= submit_tag 'Search' %>
 <% end %>
 
-<% if @plants.empty? %>
+<% if !@plants.empty? %>
   <p><% if @error %></p>
 <p><%= @error %> </p>
   <%= link_to "Go Back to All Plants", user_path(@user) %>
@@ -42,14 +44,14 @@
   <h4>To Do List:</h4>
 
   <% @tasks.each do |task| %>
-    <%= task.content %>
-      <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %>
+    <p><%= task.content %>
+      <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %></p>
       <% end %>
   <% end %>
 
   <%= form_for @task do |f| %>
   <p>
-  <%= f.label :content %>:
+  <%= f.label "New Task" %>:
   </p>
   <p>
   <%= f.text_field :content %>
