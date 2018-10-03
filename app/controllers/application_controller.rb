@@ -35,13 +35,4 @@ class ApplicationController < ActionController::Base
   def current_user_id
     session[:user_id]
   end
-
-  def login_messages
-    if current_user_id
-      @current_user = current_user
-    end
-    @message = flash[:message]
-    @errors = flash[:errors]
-  end
-
 end

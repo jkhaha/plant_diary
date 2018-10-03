@@ -8,7 +8,6 @@ class PlantsController < ApplicationController
   end
 
   def new
-    byebug
     @plant = Plant.new(user_id: current_user.id)
   end
 

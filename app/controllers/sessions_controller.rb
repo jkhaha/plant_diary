@@ -16,7 +16,6 @@ class SessionsController < ApplicationController
     end
   end
 
-  #logout
   def destroy
     log_out!
     redirect_to new_session_path
