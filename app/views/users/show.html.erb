@@ -1,5 +1,9 @@
 <h1><%= @user.name %></h1>
 
+<%= form_tag sessions_path, method: :delete do %>
+  <%= submit_tag "Log out" %>
+<% end %>
+
 <%= form_tag(user_path, method: :get) do %>
 <%= text_field_tag :search, params[:search] %>
  <%= submit_tag 'Search' %>
