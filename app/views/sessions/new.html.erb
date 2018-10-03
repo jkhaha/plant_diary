@@ -10,13 +10,14 @@
 <% end %>
 
 <%= form_with url: sessions_path, local:true do |f| %>
-
-  <%= f.label :username %>
+<p>
+  <%= f.label :username %>:
   <%= f.text_field :username, :autocomplete => :off %>
-
-  <%= f.label :password %>
+</p>
+<p>
+  <%= f.label :password %>:
   <%= f.password_field :password %>
-
+</p>
   <%= f.submit "Log in" %>
 
 <% end %>

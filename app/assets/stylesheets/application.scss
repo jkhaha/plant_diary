@@ -30,18 +30,27 @@ h1, h2, h3, h4, button, form, p, img {
 
 .main {
   z-index: -1;
-position: absolute;
-top: 0;
-width: 100vw;
-height: 100vh;
-    background-image: url("https://i.pinimg.com/originals/4c/25/a6/4c25a6dcc328795f6bfac594bb44734e.png");
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/4c/25/a6/4c25a6dcc328795f6bfac594bb44734e.png");
+
 }
 
 .userpages {
   z-index: -1;
-position: absolute;
-top: 0;
-width: 100vw;
-height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url("https://media.gettyimages.com/photos/white-background-marble-wall-texture-picture-id623898624?b=1&k=6&m=623898624&s=612x612&w=0&h=XOmT9wL2vkQDlC_rEsOjs6WtWdPSWt_stvMZ5DCCGcM=");
+}
+
+#signin {
+  text-align: center;
+}
+
+#register {
+  text-align: center;
 }

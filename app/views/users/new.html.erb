@@ -3,16 +3,18 @@
 </div>
 <h1>Sign up</h1>
 <%= form_for @user do |f| %>
-
-  <%= f.label :name %>
+<p>
+  <%= f.label :name %>:
   <%= f.text_field :name %>
-
-  <%= f.label :username %>
+</p>
+<p>
+  <%= f.label :username %>:
   <%= f.text_field :username, :autocomplete => :off %>
-
-  <%= f.label :password %>
+</p>
+<p>
+  <%= f.label :password %>:
   <%= f.password_field :password %>
-
+</p>
   <%= f.submit %>
 
 <% end %>
