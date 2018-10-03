@@ -1,4 +1,6 @@
-<h1><%= @user.name %></h1>
+<div class="nameofuser">
+  <h1><%= @user.name %></h1>
+</div>
 
 <% if flash[:message] %>
 <% flash[:message].each do |msg| %>
@@ -43,11 +45,15 @@
 <p>
   <h4>To Do List:</h4>
 
+<ul>
+
   <% @tasks.each do |task| %>
-    <p><%= task.content %>
-      <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %></p>
+    <li><%= task.content %>
+      <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %></li>
       <% end %>
   <% end %>
+
+</ul>
 
   <%= form_for @task do |f| %>
   <p>
