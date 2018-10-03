@@ -34,15 +34,13 @@
 <%= f.text_field :watering_schedule %>
 </p>
 <p>
-<%= f.label :user_id %>:
-<%= f.text_field :user_id %>
-</p>
-<p>
 <%= f.label :description %>:
 </p>
 <p>
 <%= f.text_area :description %>
 </p>
-
+<p>
+<%= f.hidden_field :user_id, value: @user.id %>
+</p>
 <%= f.submit %>
 <% end  %>
