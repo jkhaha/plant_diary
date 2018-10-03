@@ -8,7 +8,7 @@ class UsersController < ApplicationController
      @user = User.new(user_params)
      if @user.save
        start_session(@user.id)
-       flash[:message] = "You are registered!"
+       flash[:register] = ["You are registered!"]
        redirect_to user_path(@user)
      else
        flash[:errors] = @user.errors.full_messages
@@ -18,6 +18,8 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
+      @task = Task.new(user_id: @user.id)
+      @tasks = @user.tasks
       if params[:search]
         @plants = Plant.where(plant_species: params[:search].capitalize)
         if @plants.empty?

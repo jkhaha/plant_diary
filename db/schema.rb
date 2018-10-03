@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_03_132152) do
+ActiveRecord::Schema.define(version: 2018_10_03_154749) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 2018_10_03_132152) do
     t.string "image_url"
     t.string "watering_schedule"
     t.integer "user_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

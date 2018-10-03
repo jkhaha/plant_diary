@@ -6,6 +6,12 @@
 <% end %>
 <% end %>
 
+<% if flash[:register] %>
+<% flash[:register].each do |msg| %>
+<%= msg %>
+<% end %>
+<% end %>
+
 <%= form_tag sessions_path, method: :delete do %>
   <%= submit_tag "Log out" %>
 <% end %>
@@ -16,7 +22,8 @@
 <% end %>
 
 <% if @plants.empty? %>
-  <p><%= @error %></p>
+  <p><% if @error %></p>
+<p><%= @error %> </p>
   <%= link_to "Go Back to All Plants", user_path(@user) %>
 <% else %>
 
@@ -26,7 +33,29 @@
 </p>
 <% end %>
 <% end %>
-
+<% end %>
 <p>
 <%= button_to "Add A Plant", new_plant_path, method: :get %>
+</p>
+
+<p>
+  <h4>To Do List:</h4>
+  <% @tasks.each do |task| %>
+  <%= check_box_tag 'task_ids[]', task.id %>
+  <%= label_tag "task_ids_", task.content %>
+  <% end %>
+
+
+  <%= form_for @task do |f| %>
+  <p>
+  <%= f.label :content %>:
+  </p>
+  <p>
+  <%= f.text_field :content %>
+  </p>
+  <p>
+  <%= f.hidden_field :user_id, value: @user.id %>
+  </p>
+  <%= f.submit %>
+  <% end %>
 </p>
