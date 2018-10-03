@@ -1,5 +1,11 @@
-
 <h1>Log in</h1>
+
+<% if flash[:error] %>
+<% flash[:error].each do |msg| %>
+<%= msg %>
+<% end %>
+<% end %>
+
 <%= form_with url: sessions_path, local:true do |f| %>
 
   <%= f.label :username %>

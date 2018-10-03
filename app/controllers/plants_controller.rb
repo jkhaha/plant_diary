@@ -8,7 +8,8 @@ class PlantsController < ApplicationController
   end
 
   def new
-    @plant = Plant.new
+    byebug
+    @plant = Plant.new(user_id: current_user.id)
   end
 
   def create

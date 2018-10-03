@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   def start_session(user_id)
     log_in_user(user_id)
   end
-  
+
   def log_in_user(user_id)
     session[:user_id] = user_id
   end
@@ -34,6 +34,14 @@ class ApplicationController < ActionController::Base
 
   def current_user_id
     session[:user_id]
+  end
+
+  def login_messages
+    if current_user_id
+      @current_user = current_user
+    end
+    @message = flash[:message]
+    @errors = flash[:errors]
   end
 
 end
