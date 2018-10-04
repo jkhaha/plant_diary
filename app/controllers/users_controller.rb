@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       @task = Task.new(user_id: @user.id)
       @tasks = @user.tasks
       if params[:search]
-        @plants = Plant.where(plant_species: params[:search].capitalize)
+        @plants = @user.plants.where(plant_species: params[:search].capitalize)
         if @plants.empty?
           @error = "No plants match your search"
           @error
