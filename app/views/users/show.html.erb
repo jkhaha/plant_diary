@@ -1,6 +1,9 @@
+
 <section class="container">
 <div class="lefthalf">
-<div class="nameofuser"><h1><%= @user.name %></h1></div>
+  <div class="userpages">
+    </div>
+<div class="nameofuser"><h1 id="user-name"><%= @user.name %></h1></div>
 
 <% if flash[:message] %>
 <% flash[:message].each do |msg| %>
@@ -28,7 +31,8 @@
 </div>
 
 
-<p class="myplants"> My Plants: <%= button_to "Add A Plant", new_plant_path, method: :get %> </p>
+<div class="add-plant-button"><p class="myplants"> My Plants:
+   <%= button_to "Add A Plant", new_plant_path, method: :get %> </p></div>
 <% if @plants.any? %>
   <% @plants.each do |plant| %>
   <ul>
@@ -49,8 +53,8 @@
   <p class="todolist">To Do List:</p>
 <ol>
   <% @tasks.each do |task| %>
-    <li><%= task.content %>
-      <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %></li>
+    <li class="task"><div class="task-and-delete-button"><%= task.content %>
+        <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %></div></li>
       <% end %>
   <% end %>
 </ol>

@@ -1,6 +1,9 @@
 <div class="userpages">
   <div class="formforplant">
-<h1>Create A Plant:</h1>
+<h2>Create A Plant:</h2>
 <%= render 'form' %>
+</div>
+<div class="editgoback">
+<%= link_to "Go back", user_path(@plant.user.id) %>
 </div>
 </div>
