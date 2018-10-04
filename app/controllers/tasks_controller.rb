@@ -10,7 +10,7 @@ class TasksController < ApplicationController
       @task.save
       redirect_to user_path(current_user)
     else
-      render :new
+      redirect_to user_path(current_user)
     end
   end
 
