@@ -10,7 +10,9 @@ h1, h2, h3, h4, button, form, p, img, .nameofuser {
 
 .logo {
   font-family: 'Dancing Script', cursive;
-  font-size: 60px;
+  font-size: 80px;
+  padding: 20px;
+
 }
 
 .logout, .goback {
@@ -63,22 +65,23 @@ h1, h2, h3, h4, button, form, p, img, .nameofuser {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("https://i.pinimg.com/originals/4c/25/a6/4c25a6dcc328795f6bfac594bb44734e.png");
-
+  background-image: url("https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c017a95586bd0e2360ffc2676352c76&auto=format&fit=crop&w=1500&q=80");
+  background-size: 100%;
 }
 
-// .userpages {
-//   z-index: -1;
-//   position: absolute;
-//   top: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background-image: url("https://media.gettyimages.com/photos/white-background-marble-wall-texture-picture-id623898624?b=1&k=6&m=623898624&s=612x612&w=0&h=XOmT9wL2vkQDlC_rEsOjs6WtWdPSWt_stvMZ5DCCGcM=");
-// }
+.userpages {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c017a95586bd0e2360ffc2676352c76&auto=format&fit=crop&w=1500&q=80");
+  background-size: 100%;
+}
 
 #signin {
   text-align: center;
-
 }
 
 #register {
@@ -97,7 +100,6 @@ img {
     width: 50%;
 }
 
-
 .container {
   display: grid;
 }
@@ -109,3 +111,29 @@ img {
 .righthalf {
   grid-column: 2;
 }
+
+#loginheading, .signupheading {
+  margin-left: 20px;
+  font-size: 35px;
+}
+
+.formforplant {
+  margin-top: 110px;
+}
+
+
+
+
+
+// body {
+//   background: url(link) ;
+//   background-size: 200px
+//   background-position: center;
+// }
+//
+// boreder: 5px inset or dotted
+//
+// border-radius: 5px
+//
+// display: flex;
+// flex-wrap: wrap;
