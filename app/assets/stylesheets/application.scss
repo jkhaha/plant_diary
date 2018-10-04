@@ -13,7 +13,7 @@ h1, h2, h3, h4, button, form, p, img, .nameofuser {
   font-size: 60px;
 }
 
-.logout {
+.logout, .goback {
    position:absolute;
    top:0;
    right:0;
@@ -25,6 +25,13 @@ h1, h2, h3, h4, button, form, p, img, .nameofuser {
   top:0px;
   right:360px;
   padding: 22px;
+}
+
+.editbutton {
+  position:absolute;
+  top:0px;
+  right:80px;
+  padding: 19px;
 }
 
 .searchbar {
@@ -53,14 +60,14 @@ h1, h2, h3, h4, button, form, p, img, .nameofuser {
 
 }
 
-.userpages {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://media.gettyimages.com/photos/white-background-marble-wall-texture-picture-id623898624?b=1&k=6&m=623898624&s=612x612&w=0&h=XOmT9wL2vkQDlC_rEsOjs6WtWdPSWt_stvMZ5DCCGcM=");
-}
+// .userpages {
+//   z-index: -1;
+//   position: absolute;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-image: url("https://media.gettyimages.com/photos/white-background-marble-wall-texture-picture-id623898624?b=1&k=6&m=623898624&s=612x612&w=0&h=XOmT9wL2vkQDlC_rEsOjs6WtWdPSWt_stvMZ5DCCGcM=");
+// }
 
 #signin {
   text-align: center;

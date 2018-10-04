@@ -1,5 +1,5 @@
-<section class="container"
-<div class="lefthalf"
+<section class="container">
+<div class="lefthalf">
 <div class="nameofuser"><h1><%= @user.name %></h1></div>
 
 <% if flash[:message] %>
@@ -30,8 +30,8 @@
 
 <p class="myplants"> My Plants: <%= button_to "Add A Plant", new_plant_path, method: :get %> </p>
 <% if @plants.any? %>
-<ul>
   <% @plants.each do |plant| %>
+  <ul>
   <li><%= link_to plant.nickname, plant_path(plant) %></li>
   </ul>
   <% end %>

@@ -1,10 +1,13 @@
+<section class="container">
+<div class="lefthalf">
 <div class="userpages">
 
 </div>
 
 <h1><%= @plant.nickname %></h1>
-
+<div class="editbutton">
 <p><%= link_to "Edit #{@plant.nickname}", edit_plant_path(@plant) %></p>
+</div>
 <p>
 <%= form_tag plant_path(@plant.id), method: "delete" do %>
   <%= submit_tag "Delete #{@plant.nickname}" %>
@@ -13,6 +16,8 @@
 
 <img src="<%= @plant.image_url %>" alt="<%= @plant.nickname %>">
 
+</div>
+<div class="righthalf">
 <ul>
   <li>Species: <%= @plant.plant_species %></li>
   <li>Age: <%= @plant.age %></li>
@@ -50,4 +55,8 @@
 <%= f.submit %>
 <% end %>
 
+<div class="goback">
 <%= link_to "Go back", user_path(@user.id) %>
+</div>
+</div>
+</section>
