@@ -37,12 +37,6 @@ h1, h2, h3, h4, button, form, p, img, .nameofuser {
   padding: 19px;
 }
 
-.deletebutton {
-  position:absolute;
-  top:0px;
-  right:200px;
-  padding: 0px;
-}
 
 .searchbar {
   position:absolute;
@@ -143,7 +137,7 @@ img {
 
 .editgoback {
   margin-left: 45px;
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 .task-and-delete-button {
@@ -154,23 +148,7 @@ img {
 .add-plant-button {
   display:flex;
 }
-// .content{
-//   width: 80%
-// }
 
-
-
-
-
-// body {
-//   background: url(link) ;
-//   background-size: 200px
-//   background-position: center;
-// }
-//
-// boreder: 5px inset or dotted
-//
-// border-radius: 5px
-//
-// display: flex;
-// flex-wrap: wrap;
+img {
+  border:1px solid;
+}

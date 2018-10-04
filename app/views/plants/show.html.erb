@@ -1,6 +1,4 @@
 <section class="container">
-
-
 <div class="lefthalf">
   <div class="userpages">
 
@@ -11,13 +9,13 @@
 <p><%= link_to "Edit #{@plant.nickname}", edit_plant_path(@plant) %></p>
 </div>
 
-<div class="deletebutton">
+
 <p>
 <%= form_tag plant_path(@plant.id), method: "delete" do %>
   <%= submit_tag "Delete #{@plant.nickname}" %>
 <% end %>
 </p>
-</div>
+
 
 <img src="<%= @plant.image_url %>" alt="<%= @plant.nickname %>">
 
