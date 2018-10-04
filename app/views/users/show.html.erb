@@ -1,6 +1,6 @@
-<div class="nameofuser">
-  <h1><%= @user.name %></h1>
-</div>
+<section class="container"
+<div class="lefthalf"
+<div class="nameofuser"><h1><%= @user.name %></h1></div>
 
 <% if flash[:message] %>
 <% flash[:message].each do |msg| %>
@@ -20,37 +20,40 @@
 <% end %>
 </div>
 
-<%= form_tag(user_path, method: :get) do %>
+<div class="searchbartitle"><p>Search by Species: </p></div>
+<div class="searchbar"><p><%= form_tag(user_path, method: :get) do %>
 <%= text_field_tag :search, params[:search] %>
- <%= submit_tag 'Search' %>
+ <%= submit_tag 'Search' %></p>
 <% end %>
+</div>
 
+
+<p class="myplants"> My Plants: <%= button_to "Add A Plant", new_plant_path, method: :get %> </p>
 <% if @plants.any? %>
+<ul>
   <% @plants.each do |plant| %>
-  <p><%= link_to plant.nickname, plant_path(plant) %></p>
+  <li><%= link_to plant.nickname, plant_path(plant) %></li>
+  </ul>
   <% end %>
+
 
 <% else %>
 <p><%= @error %> </p>
   <%= link_to "Go Back to All Plants", user_path(@user) %>
 <% end %>
-
-<p>
-<%= button_to "Add A Plant", new_plant_path, method: :get %>
 </p>
+</div>
 
-<p>
-  <h4>To Do List:</h4>
 
-<ul>
-
+<div class="righthalf">
+  <p class="todolist">To Do List:</p>
+<ol>
   <% @tasks.each do |task| %>
     <li><%= task.content %>
       <%= form_tag task_path(task), method: "delete" do %><%= submit_tag "Done" %></li>
       <% end %>
   <% end %>
-
-</ul>
+</ol>
 
   <%= form_for @task do |f| %>
   <p>
@@ -65,3 +68,5 @@
   <%= f.submit %>
   <% end %>
 </p>
+</div>
+</section>

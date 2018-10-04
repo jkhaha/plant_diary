@@ -3,8 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');ow
 
-h1, h2, h3, h4, button, form, p, img {
+h1, h2, h3, h4, button, form, p, img, .nameofuser {
   margin-left: 20px;
+
 }
 
 .logo {
@@ -17,6 +18,20 @@ h1, h2, h3, h4, button, form, p, img {
    top:0;
    right:0;
    padding: 20px;
+}
+
+.searchbartitle {
+  position:absolute;
+  top:0px;
+  right:360px;
+  padding: 22px;
+}
+
+.searchbar {
+  position:absolute;
+  top:3px;
+  right:105px;
+  padding: 0px;
 }
 
 .nameofuser {
@@ -54,4 +69,29 @@ h1, h2, h3, h4, button, form, p, img {
 
 #register {
   text-align: center;
+}
+
+.myplants, .todolist {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.container {
+  display: grid;
+}
+
+.lefthalf {
+  grid-column: 1;
+}
+
+.righthalf {
+  grid-column: 2;
 }
