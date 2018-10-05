@@ -18,6 +18,9 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
+        unless session[:user_id] == @user.id
+        redirect_to user_path(current_user)
+      end
       @task = Task.new(user_id: @user.id)
       @tasks = @user.tasks
       if params[:search]

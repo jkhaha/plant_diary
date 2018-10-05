@@ -2,9 +2,10 @@ class PlantsController < ApplicationController
 
   def show
     @plant = Plant.find(params[:id])
+    @user = @plant.user
+    security_measures
     @comments = @plant.comments
     @comment = Comment.new
-    @user = @plant.user
   end
 
   def new
@@ -23,6 +24,7 @@ class PlantsController < ApplicationController
 
   def edit
     @plant = Plant.find(params[:id])
+    security_measures
   end
 
   def update
@@ -44,5 +46,12 @@ class PlantsController < ApplicationController
 private
   def plant_params
     params.require(:plant).permit(:user_id, :nickname, :plant_species, :age, :description, :location, :image_url, :watering_schedule)
+  end
+
+  def security_measures
+    @user = @plant.user
+    unless session[:user_id] == @user.id
+    redirect_to user_path(current_user)
+  end
   end
 end
