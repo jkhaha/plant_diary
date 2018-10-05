@@ -15,6 +15,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @plant = @comment.plant_id
+    @comment.destroy
+    redirect_to plant_path(@plant)
+  end
+
 private
   def comment_params
     params.require(:comment).permit(:content, :plant_id)

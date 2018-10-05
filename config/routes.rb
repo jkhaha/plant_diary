@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :plants, only: [:show, :new, :create, :edit, :update, :destroy]
 
-  resources :comments, only: [:new, :create]
+  resources :comments, only: [:new, :create, :destroy]
 
   resources :tasks, only: [:new, :create, :destroy]
 
