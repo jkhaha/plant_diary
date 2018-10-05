@@ -41,13 +41,15 @@
 <% end %>
 
 <h4>Add A Comment:</h4>
-<% if @comment.errors.any? %>
-<% @comment.errors.full_message.each do |message| %>
+
+<% if flash[:error] %>
 <ul>
-  <li><%= message %></li>
+<% flash[:error].each do |msg| %>
+<li><%= msg %></li>
 </ul>
-  <% end %>
 <% end %>
+<% end %>
+
 <%= form_for @comment do |f| %>
 <p>
 <%= f.text_area :content %>

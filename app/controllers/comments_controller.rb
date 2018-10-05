@@ -6,9 +6,13 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(comment_params)
-
-    @comment.save
-    redirect_to plant_path(@comment.plant)
+    if @comment.valid?
+      @comment.save
+      redirect_to plant_path(@comment.plant)
+    else
+      flash[:error] = @comment.errors.full_messages
+      redirect_to plant_path(@comment.plant)
+    end
   end
 
 private

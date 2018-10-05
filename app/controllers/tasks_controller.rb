@@ -10,7 +10,8 @@ class TasksController < ApplicationController
       @task.save
       redirect_to user_path(current_user)
     else
-      redirect_to user_path(current_user)
+      flash[:error] = @task.errors.full_messages
+      redirect_to user_path(@task.user)
     end
   end
 

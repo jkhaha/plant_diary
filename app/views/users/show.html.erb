@@ -59,18 +59,18 @@
   <% end %>
 </ol>
 
-<% if @task.errors.any? %>
-<% @task.errors.full_message.each do |message| %>
-<ul>
-  <li><%= message %></li>
-</ul>
-<% end %>
-<% end %>
 
   <%= form_for @task do |f| %>
   <p>
   <%= f.label "New Task" %>:
   </p>
+  <% if flash[:error] %>
+  <ul>
+  <% flash[:error].each do |msg| %>
+  <li><%= msg %></li>
+  </ul>
+  <% end %>
+  <% end %>
   <p>
   <%= f.text_field :content %>
   </p>
