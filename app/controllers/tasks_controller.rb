@@ -1,9 +1,5 @@
 class TasksController < ApplicationController
 
-  def new
-    @task = Task.new(user_id: current_user.id)
-  end
-
   def create
     @task = Task.new(task_params)
     if @task.valid?
