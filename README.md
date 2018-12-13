@@ -20,13 +20,13 @@ This application is made for plant lovers who have a difficult time keeping trac
 
 ## Steps to use application
 
-### `bundle install`
+```bundle install```
 
 Install gems specified in Gemfile
 
-### `rails db:migrate`
+```rails db:migrate```
 
-### `rails server`
+```rails server```
 
 You can find application by accessing http://localhost:3000 in your browser
 
