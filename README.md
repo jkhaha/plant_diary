@@ -1,10 +1,17 @@
 # Plant Diary
 
-Plant Diary is designed to keep track of your house plants. Users can create an account and submit information about each plant, including its species, location in home, description and watering schedule. Users have the ability to create, update, delete, and write diary entries about each plant. Each user's homepage also contains a to-do list so individuals can keep track of plant related tasks and check off each task once completed. 
+Plant Diary is designed to keep track of your house plants. Users can create an account and submit information about each of their plants.
 
 ## Motivation
 
 This application is made for plant lovers who have a difficult time keeping track of all the plants in their home. 
+
+## Features
+- Create a new account/ login with username and password if an existing user
+- Create, update and delete plants
+- When creating a new plant, users can include information concerning its species, location in home, watering schedule, image, and nickname
+- Create and delete diary entires about each plant
+- To do list on user homepage allows users to keep track of plant related tasks and check off when completed
 
 ## Built with 
 
