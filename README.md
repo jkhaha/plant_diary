@@ -12,3 +12,13 @@ This application is made for plant lovers who have a difficult time keeping trac
 <img width="1421" alt="screen shot 2018-12-13 at 12 09 14 pm" src="https://user-images.githubusercontent.com/38592156/49955133-1db73a00-fed0-11e8-94e8-0f9b46ac0451.png">
 <img width="1418" alt="screen shot 2018-12-13 at 12 09 54 pm" src="https://user-images.githubusercontent.com/38592156/49955142-20b22a80-fed0-11e8-9f93-c0bc1ea4e774.png">
 
+## Steps to use application
+
+### `bundle install`
+
+Install gems specified in Gemfile
+
+### `rails server`
+
+You can find application by accessing http://localhost:3000 in your browser
+
