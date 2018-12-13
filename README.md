@@ -4,7 +4,7 @@ Plant Diary is designed to keep track of your house plants. Users can create an 
 
 ## Motivation
 
-This application is made for plant lovers who have a difficult time keeping track of all the plants in their home. 
+This application is made for plant lovers who need an easier way of keeping track of the plants in their home. 
 
 ## Features
 - Create a new account/ login with username and password if an existing user
