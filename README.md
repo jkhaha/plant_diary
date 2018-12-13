@@ -6,6 +6,12 @@ Plant Diary is designed to keep track of your house plants. Users can create an 
 
 This application is made for plant lovers who have a difficult time keeping track of all the plants in their home. 
 
+## Built with 
+
+- Ruby on Rails using MVC pattern
+- Bcrypt for authentication
+- Bootstrap and custom CSS
+
 ## Screenshots
 
 <img width="1426" alt="screen shot 2018-12-13 at 12 07 02 pm" src="https://user-images.githubusercontent.com/38592156/49955130-1b54e000-fed0-11e8-95c8-5cdbffd29505.png">
@@ -17,6 +23,10 @@ This application is made for plant lovers who have a difficult time keeping trac
 ### `bundle install`
 
 Install gems specified in Gemfile
+
+### `rails db:migrate`
+
+### `rails db:seed`
 
 ### `rails server`
 
