@@ -30,3 +30,8 @@ Install gems specified in Gemfile
 
 You can find application by accessing http://localhost:3000 in your browser
 
+### Contributors
+
+- Jackie Ha
+- McKenzie Fiege 
+
