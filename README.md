@@ -26,8 +26,6 @@ Install gems specified in Gemfile
 
 ### `rails db:migrate`
 
-### `rails db:seed`
-
 ### `rails server`
 
 You can find application by accessing http://localhost:3000 in your browser
