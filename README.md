@@ -4,7 +4,7 @@ Plant Diary is designed to keep track of your house plants. Users can create an 
 
 ## Motivation
 
-This application is made for plant lovers who need an easier way of keeping track of the plants in their home. 
+This application is made for plant lovers who need an easier way of keeping track of the plants in their home.
 
 ## Features
 - Create a new account/ login with username and password if an existing user
@@ -13,11 +13,15 @@ This application is made for plant lovers who need an easier way of keeping trac
 - Create and delete diary entires about each plant
 - To do list on user homepage allows users to keep track of plant related tasks and check off when completed
 
-## Built with 
+## Built with
 
 - Ruby on Rails using MVC pattern
 - Bcrypt for authentication
 - Bootstrap and custom CSS
+
+## Demo
+
+[Demo Video](https://www.youtube.com/watch?v=3fGJ52SJP-4&feature=youtu.be)
 
 ## Screenshots
 
@@ -40,5 +44,4 @@ You can find application by accessing http://localhost:3000 in your browser
 ### Contributors
 
 - Jackie Ha
-- McKenzie Fiege 
-
+- McKenzie Fiege
