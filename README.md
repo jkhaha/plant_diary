@@ -21,7 +21,7 @@ This application is made for plant lovers who need an easier way of keeping trac
 
 ## Demo
 
-[Demo Video](https://www.youtube.com/watch?v=3fGJ52SJP-4&feature=youtu.be)
+[Demo Video](https://www.youtube.com/watch?v=EL4fazHLjEI&feature=youtu.be)
 
 ## Screenshots
 
